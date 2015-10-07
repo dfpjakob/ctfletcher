@@ -1,0 +1,499 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a {
+text-decoration: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+@font-face {
+  font-family: "LHF Old Block CondMed";
+  src: url('fonts/../../fonts/LHF Old Block CondMed.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'lhf_old_block_regboldregular';
+  src: url("../fonts/lhf_old_block_regbold-webfont.eot");
+  src: url("../fonts/lhf_old_block_regbold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/lhf_old_block_regbold-webfont.woff") format("woff"), url("../fonts/lhf_old_block_regbold-webfont.ttf") format("truetype"), url("../fonts/lhf_old_block_regbold-webfont.svg#lhf_old_block_regboldregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  color: #fff;
+  font-family: "lhf_old_block_regboldregular", sans-serif;
+  background-color: #000;
+  background-image: url("../img/bg-grit.png");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a, button {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.clear {
+clear: both;
+}
+
+
+.container {
+  text-align: center;
+  margin: 0 auto;
+  // width: 640px;
+  width: 100%;
+}
+
+.full-screen, #home {
+  width: 320px;
+  min-height: 480px;
+  background-size: cover;
+}
+@media (min-height: 568px) {
+  .full-screen, #home {
+    min-height: 568px;
+  }
+}
+
+#view {
+//  width: 320px;
+  margin: 0 auto;
+  position: relative;
+}
+
+area {
+  cursor: pointer;
+}
+
+#ct_logo {
+  display: inline-block;
+  text-align: center;
+}
+
+.button {
+color: #fff;
+background: #111111;
+display: inline-block;
+}
+
+/** Navigation **/
+
+
+#navigation {
+	position: relative;
+}
+
+#navigation #button-back {
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+#navigation #button-home {
+	position: absolute;
+	right: 10px;
+	top: 10px;
+}
+
+/** Home **/
+
+#home-buttons {
+margin: 20px 0;
+}
+
+#home-buttons img {
+margin: 0 5px 10px 0;
+}
+
+
+/** Motivation **/
+
+#header-motivation {
+/*
+background: url('../img/header_motivation.png') top center no-repeat;
+height: 358px;
+*/
+}
+
+.motivation .tracks {
+  margin-top: 40px;
+  height: 270px;
+  /* overflow: scroll;
+  -webkit-overflow-scrolling: touch; */
+}
+.motivation .tracks li {
+  cursor: pointer;
+  padding: 10px 5px;
+  border-bottom: 1px solid transparent;
+  position: relative;
+  background: none repeat scroll 0 0 #111111;
+  border-bottom: 1px solid rgba(0, 0, 0, 0);
+  color: #fff;
+  cursor: pointer;
+  font-weight: normal;
+  margin: 0 auto 8px;
+  padding: 15px 15px;
+  position: relative;
+  text-align: left;
+  text-transform: uppercase;
+  width: 85%;
+  font-size: 22px;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+#motivation .tracks .playing {
+  background: #333;
+}
+#motivation .tracks .current-time {
+  height: 2px;
+  background: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 200;
+}
+#motivation .tracks .current-download {
+  height: 2px;
+  background: #aaa;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 199;
+}
+
+/** Workout **/
+
+#header-workout {
+background: url('../img/header_workout.png') top center no-repeat;
+height: 358px;
+background-width:99%;
+}
+
+#header-workout-powerlifting {
+background: url('../img/header_workout_powerlifting.png') top center no-repeat;
+height: 358px;
+background-width:99%;
+}
+
+#header-workout-chest{
+background: url('../img/header_workout_chest.png') top center no-repeat;
+height: 358px;
+}
+
+#header-workout-legs{
+background: url('../img/header_workout_legs.png') top center no-repeat;
+height: 358px;
+}
+
+#header-workout-back{
+background: url('../img/header_workout_back.png') top center no-repeat;
+height: 358px;
+}
+
+
+.workouts #section-intro {
+font-family: arial, sans-serif;
+font-size: 15px;
+margin: 20px auto;
+width: 85%;
+}
+
+#workout-buttons .button {
+	margin-bottom: 14px;
+	padding: 16px 0;
+	text-align: center;
+	width: 75%;
+}
+
+#workout-buttons .button-subhead{
+clear: both;
+display: block;
+line-height: 20px;
+margin-bottom: 0;
+font-size: 20px;
+}
+
+#workout-buttons .button-header {
+clear: both;
+display: block;
+font-size: 25px;
+line-height: 50px;
+}
+
+#workout-cycle-buttons {
+font-size: 20px;
+margin: 0 auto;
+width: 85%
+}
+
+#workout-cycle-buttons .button {
+display: block;
+margin-bottom: 10px;
+text-align: left;
+padding: 10px;
+}
+
+#workout-cycle-buttons a.button-small {
+background: #2d2d2d !important;
+color: #fff;
+font-size: 16px;
+text-align: left;
+display: inline-block;
+padding: 5px;
+}
+
+.button-label {
+display: inline-block;
+font-size: 20px;
+line-height: 26px;
+padding-top: 5px;
+/*
+float: left;
+top:50%;
+position:absolute;
+*/
+}
+
+.button-label a {
+color: #fff;
+}
+
+.workout-cycle-links {
+display: inline-block;
+float: right;
+line-height: 26px;
+}
+
+a.rest {
+background: #0a0a0a;
+color: #565656;
+}
+
+.workout-exercise {
+font-family: arial, sans-serif;
+font-size: 16px;
+margin-bottom: 20px;
+text-align: left;
+}
+
+.workout-exercise h4 {
+font-weight: bold;
+margin-bottom: 8px;
+}
+
+.column {
+float: left;
+width: 50%;
+}
+
+#workout-overview {
+margin: 30px auto;
+width: 90%;
+}
+
+#header-workout-toggle .button {
+background: #2d2d2d;
+font-size: 20px;
+margin: 0 5px;
+padding: 10px;
+}
+
+#ebook-link {
+clear:both;
+}
+
+/** Tips **/
+
+#header-tips{
+/*
+background: url('../img/header_tips.png') top center no-repeat;
+height: 358px;
+*/
+}
+
+#tip-content {
+font-family: arial, sans-serif;
+font-size: 20px;
+min-height: 260px;
+line-height: 30px;
+margin: 30px auto;
+text-align: left;
+width: 85%;
+}
+
+#tip-navigation {
+padding: 0 24px;
+}
+
+#tip-navigation .left {
+  float: left;
+}
+
+#tip-navigation .right {
+  float: right;
+}
+#tip-navigation .left img {
+  width:100px;
+}
+#tip-navigation .right img {
+  width:100px;
+}
+
+#button-back img {
+  width:200px;
+}
+#button-home img {
+  width:25px;
+}
+
+/* audio styles */
+div.ui-slider-track
+{
+  margin: 0;
+  width:100%;
+}
+#track-title {
+  padding:10px;
+  font-size:24px;
+}
+
+#player-play,
+#player-pause,
+#player-stop
+{
+   display: inline-block;
+   width: 30px;
+   height: 30px;
+   margin-top: 5px;
+   margin-right: 10px;
+}
+#player-play {
+  background: url('../img/play.png');
+  background-repeat: no-repeat;
+  background-position: 5px 5px;
+}
+
+#player-pause {
+  background: url('../img/pause.png');
+  background-repeat: no-repeat;
+  background-position: 5px 5px;
+}
+
+#player-stop {
+  background: url('../img/stop.png');
+  background-repeat: no-repeat;
+  background-position: 5px 5px;
+}
+
+/* end audio styles */
+
+/* start motivation track styles */
+#motivation .tracks > li .price {
+  float: right;
+  font-family: sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+  margin: 0 16px 0 10px;
+}
+#motivation .tracks > li.ready {
+  background: #111;
+  color: #acacac;
+}
+#motivation .tracks > li.playing {
+  background: #333;
+  color: #fff;
+}
+#motivation .tracks > li.downloading {
+  background: #111;
+  color: #4d4d4d;
+  background-image: url("../img/ajax-loader.gif");
+  background-size: 24px 24px;
+  background-position: 97% 15px;
+  background-repeat: no-repeat;
+}
+#motivation .tracks > li.available {
+  background: #0a0a0a;
+  color: #777;
+  background-image: url("../img/icon-download.png");
+  background-size: 15px 16px;
+  background-position: 95.5% 18px;
+  background-repeat: no-repeat;
+}
+#motivation .tracks > li.locked {
+  background: #0a0a0a;
+  color: #999;
+  background-image: url("../img/icon-lock.png");
+  background-size: 11px auto;
+  background-position: 94.5% 19px;
+  background-repeat: no-repeat;
+}
+
+/* end motivation track styles */
+
+
+

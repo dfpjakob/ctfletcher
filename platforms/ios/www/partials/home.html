@@ -1,0 +1,85 @@
+    <div class="container">
+    <table style="width:100%">
+      <tr>
+      <td colspan=2>
+        <img src="img/ct_artwork.png" id="ct_logo" style="width:90%">
+      </td>
+      </tr>
+      <tr>  
+        <td>
+          <a href="#/motivation"><img src="img/home_motivation.png" style="width:95%""></a>
+        </td>
+        <td ng-include="workoutsUrl">
+	  
+        </td>
+      </tr>
+      <tr>
+        <td>
+	  <a href="http://gummymall.com/ctfletcher"><img src="img/home_shop.png" style="width:95%""></a>
+        </td>
+        <td ng-include="tipsUrl">
+          
+        </td>
+      </tr>
+      <tr>
+        <td colspan=2 style="text-align:center">
+          <br/>
+          <a href="javascript:void(0);" ng-click="toggleModal3()"><img style="width:45%" src="img/button_settings.png"></a>
+        </td>
+      </tr>
+    </table>
+    </div>
+<modal-dialog show='modalShown' width='80%' height='60%'>
+  <div class='ng-modal-close' ng-click='toggleModal()'>X</div> 
+  <div class='ng-modal-dialog-content'>
+    <p class="header">
+      <span class="title">WORKOUTS</span><img class="lock" src="img/icon_locked.png"/> <span class="price">$1.99</span>&nbsp;
+    </p>
+    <p>
+      Get the MASSTERPLAN and learn the same weights and routines CT used to train for his world record lifts. Powerlifting workout available now - Bodybuilding and Psycho Rep workouts coming soon!
+    </p>
+    <div class="button">
+      <a href="javascript:void(0);" ng-click="unlockFeature('feature_workouts')">
+        <img style="width:90%" src="img/button_purchase.png"/>
+      </a>
+    </div>
+  </div>
+</modal-dialog>
+
+<modal-dialog show='modalShown2' width='80%' height='50%'>
+  <div class='ng-modal-close' ng-click='toggleModal2()'>X</div> 
+  <div class='ng-modal-dialog-content'>
+    <p class="header">
+      <span class="title">TIPS</span><img class="lock" src="img/icon_locked.png"/><span class="price">$0.99</span>&nbsp;
+    </p>
+    <p>
+      Get useful workout, diet, and mental training tips from CT. Additional tips will be made available in future updates. 
+    </p>
+    <div class="button">
+      <a href="javascript:void(0);" ng-click="unlockFeature('feature_tips')">
+        <img style="width:90%" src="img/button_purchase.png"/>
+      </a>
+    </div>
+  </div> 
+</modal-dialog>
+
+<modal-dialog show='modalShown3' width='80%' height='40%'>
+  <div class='ng-modal-close' ng-click='toggleModal3()'>X</div> 
+  <div class='ng-modal-dialog-content'>
+  <p class="header">
+    SETTINGS
+  </p>
+  <p>
+    Restore any previous purchases made on the app by clicking the button below.
+  </p>
+  <div class="button">
+    <a href="javascript:void(0);" ng-click="restorePurchases()">
+      <img style="width:85%" src="img/button_restore_purchases.png"/>
+    </a>
+  </div>
+  <p>
+  {{restorePurchasesCompleted}}
+  </p>
+  </div>
+</modal-dialog>
+

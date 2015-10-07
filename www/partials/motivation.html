@@ -1,0 +1,55 @@
+<style>
+div.ui-slider-track
+{
+   margin: 0;
+   width: 100%;
+}
+</style>
+
+<div id="motivation" class="container motivation">
+
+	<div id="navigation">
+	  
+		<div id="button-back"><a href="index.html"><img src="img/button_back.png"></a></div>
+		
+		<div id="button-home"><a href="index.html"><img src="img/button_home.png"></a></div>
+	  
+	</div>
+	  
+	<div class="header" id="header-motivation">
+		<img src="img/header_motivation.png" style="width:100%"/>
+	</div>
+
+	<div class="player" style="background-color:#1F1F1F;padding:0px 10px;">
+		<div id="track-title" ng-bind="trackTitle"></div>
+	<div ui-slider="slider.options" min="0" max="20" ng-model="sliderExample3" id="musicSlider"></div>
+
+
+<!--
+<div id="musicSlider" ng-model="sliderExample3" max="20" min="0" ui-slider="{stop: sliderStop}" class="ng-valid ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all ng-dirty" aria-disabled="false">
+<a href="#" class="ui-slider-handle ui-state-default ui-corner-all" style="left: 35%;"></a>
+</div>
+-->
+
+	<a href="javascript:void(0);" id="player-play" title="Play" ng-click="playMedia();"></a>
+	<a href="javascript:void(0);" id="player-pause" title="Pause" ng-click="pauseMedia();"></a>
+	<a href="javascript:void(0);" id="player-stop" title="Stop" ng-click="stopMedia();"></a>
+
+</div>
+	  
+	<ul class="tracks">
+		<li class="track" ng-repeat="(index, track) in tracks" ng-click="Toggle(track)" ng-class="TrackStatus(track)">
+		<span style="float:right; background-image:url('img/icon_track_locked.png');background-repeat:no-repeat;background-position:-30px top;" ng-show="!track.owned && track.price" class="price" ng-bind="'$'+track.price"></span>
+		<span style="float:right;" ng-show="track.price == 0" ng-bind="'FREE'"></span>
+		{{track.title}}
+
+		<div class="current-time" ng-show="track == player.current" ng-style="{width: track.playback*100+'%'}"></div>
+		<div class="current-download" ng-show="track.downloading" ng-style="{width: track.downloading*100+'%'}"></div>
+
+		</li>
+	</ul>
+
+</div>
+	
+	
+
